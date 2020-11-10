@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -18,10 +19,6 @@ h6 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   color: #66fcf1;
-}
-
-ul {
-  padding: 0 2em 0 2em;
 }
 
 li {
@@ -42,33 +39,102 @@ h1 {
 h2 {
   margin: 1em;
 }
+
 img {
   width: 100%;
-  height: auto;
-  aspect-ratio: attr(width) / attr(height);
 }
+
+/* CSS Float */
+/* mobile */
+@media only screen and (max-device-width: 667px) {
+  #grid-floats {
+    display: inline-block;
+  }
+  #grid-floats > .grid-item:nth-child(1) {
+    width: 100%;
+  }
+  #grid-floats > .grid-item:nth-child(n + 2):nth-child(even) {
+    float: left;
+    width: 50%;
+    height: 650px;
+  }
+  #grid-floats > .grid-item:nth-child(n + 3):nth-child(odd) {
+    float: right;
+    width: 50%;
+    height: 650px;
+  }
+}
+/* tablet */
+@media only screen and (min-device-width: 668px) and (max-device-width: 1024px) {
+  #grid-floats {
+    display: inline-block;
+  }
+  #grid-floats > .grid-item {
+    float: left;
+  }
+  #grid-floats > .grid-item:nth-child(1) {
+    width: 50%;
+  }
+  #grid-floats > .grid-item:nth-child(2) {
+    float: right;
+    width: 50%;
+  }
+  #grid-floats > .grid-item:nth-child(n + 3) {
+    width: 33.33%;
+    height: 550px;
+  }
+}
+/* desktop */
+@media screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
+  #grid-floats {
+    display: inline-block;
+  }
+  #grid-floats > .grid-item {
+    float: left;
+  }
+  #grid-floats > .grid-item:nth-child(1) {
+    width: 50%;
+    height: 550px;
+  }
+  #grid-floats > .grid-item:nth-child(n + 2) {
+    width: 25%;
+    height: 550px;
+  }
+}
+
 /* CSS Flexbox */
 /* mobile */
-/* @media only screen and (min-device-width: 668px) and (max-device-width: 1024px) {
+@media only screen and (max-device-width: 667px) {
   #grid-flex {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
-  .grid-item:nth-child(1) {
-    flex: 2;
+  /* #grid-flex > .grid-item:nth-child(1) {
+    flex: 100%;
   }
-  .grid-item {
-    flex: 1;
-  }
-} */
+  #grid-flex > .grid-item {
+    flex: 50%;
+  } */
+}
 /* tablet */
 @media only screen and (min-device-width: 668px) and (max-device-width: 1024px) {
   #grid-flex {
     display: flex;
-    flex-wrap: wrap;
     gap: 2em;
   }
-  #grid-flex > .grid-item {
-    width: 50%;
+}
+/* desktop */
+@media screen and (min-device-width: 1025px) and (max-device-width: 1600px) {
+  #grid-flex {
+    display: flex;
+    gap: 2em;
+  }
+  #grid-flex > .grid-item:nth-child(1) {
+    flex-grow: 2;
+  }
+  #grid-flex > .grid-item:nth-child(2) {
+    flex-grow: 1;
   }
 }
 
