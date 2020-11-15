@@ -30,7 +30,17 @@ li {
 }
 
 li:hover {
+  animation: pulse 2s;
   background-color: #1f2833;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #0b0c10;
+  }
+  100% {
+    background-color: #1f2833;
+  }
 }
 
 h1 {
