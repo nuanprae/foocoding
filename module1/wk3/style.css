@@ -45,6 +45,10 @@ img {
   width: 100%;
   filter: grayscale(100%);
 }
+img:hover {
+  filter: grayscale(0%);
+  transition: ease-in 1s;
+}
 p {
   padding-bottom: 1.25em;
 }
