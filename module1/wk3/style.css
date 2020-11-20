@@ -18,16 +18,10 @@ body {
   color: #222;
   background-color: #fff;
 }
-header {
-  padding: 3em 0.75em 2.5em 0.75em;
-}
 nav {
   display: flex;
   flex-direction: column;
   line-height: 1.5em;
-}
-section {
-  padding: 0 0.75em;
 }
 h1 {
   font-size: 1.375rem;
@@ -100,7 +94,6 @@ footer a:visited {
 .latest-posts {
   display: flex;
   flex-direction: column;
-  padding: 0 0.75em 5em 0.75em;
   line-height: 1.5em;
 }
 .masonry {
@@ -157,10 +150,8 @@ footer a:visited {
   .latest-posts h3 {
     grid-column: 3/4;
     grid-row: 1;
-    padding: 0em 1.25em 0em;
   }
   .latest-posts li {
-    padding: 0em 1.25em 0em;
     line-height: 1.375rem;
   }
   .latest-posts > .col-1 {
@@ -170,6 +161,16 @@ footer a:visited {
   .col-2 {
     grid-column: 4/5;
     grid-row: 2;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  footer h3 {
+    padding-bottom: 0.625rem;
+  }
+  footer section:nth-child(1) {
+    grid-column: 3/4;
   }
   .masonry {
     column-count: 3;
