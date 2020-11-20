@@ -122,37 +122,40 @@ footer a:visited {
   }
   header {
     display: flex;
+    padding: 3em 0.75em 4em 0.75em;
   }
-  header > h1 {
+  header h1 {
     width: 33.33%;
   }
-  header > p {
+  header nav {
     width: 66.66%;
+    padding: 0 0.75em;
   }
   .introduction {
     display: flex;
     font-size: 1rem;
+    padding: 0 0.75em 4em 0.75em;
   }
   .introduction > h2 {
     width: 33.33%;
   }
   .introduction > p {
     width: 66.66%;
+    padding: 0 0.75em;
   }
   .latest-posts {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(2, minmax(min-content, auto));
+    padding-bottom: 8em;
+    line-height: 1.375rem;
   }
-  .latest-posts > ul li a:link {
+  .latest-posts ul li a:link {
     color: #222;
   }
   .latest-posts h3 {
     grid-column: 3/4;
     grid-row: 1;
-  }
-  .latest-posts li {
-    line-height: 1.375rem;
   }
   .col-1 {
     grid-column: 3/4;
@@ -186,5 +189,6 @@ footer a:visited {
   .masonry {
     column-count: 3;
     column-gap: 0.75em;
+    padding: 0 0.75em 4em 0.75em;
   }
 }
