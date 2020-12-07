@@ -3,7 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+*:focus {
+  outline: none;
+}
 .envelope {
+  font-family: "Sue Ellen Francisco", cursive;
+  font-size: 2rem;
   background-color: #fff8e0;
   border: 10px solid;
   border-image: repeating-linear-gradient(
@@ -23,30 +28,66 @@
   grid-template-rows: repeat(3, 1fr);
   width: 100vw;
   height: 100vh;
+  justify-content: center;
 }
 .sender {
-  border: dashed red 2px;
+  /* border: dashed red 2px; */
   grid-column: 1/3;
   grid-row: 1;
 }
+.sender h1 {
+  font-size: 2rem;
+  padding-left: 2rem;
+}
+.sender h1:nth-child(n + 2) {
+  padding-left: 4rem;
+}
 .receiver {
-  border: dashed blue 2px;
+  /* border: dashed blue 2px; */
   grid-column: 3/6;
   grid-row: 2;
+  display: flex;
+  flex-direction: column;
+}
+.receiver h1 {
+  padding-left: 2rem;
+}
+.receiver h2 {
+  font-size: 2.5rem;
+  align-self: center;
+}
+.receiver a {
+  align-self: flex-end;
+}
+.receiver .input-text {
+  font-size: 2rem;
+  font-family: "Sue Ellen Francisco", cursive;
+  margin: 1rem;
+  padding: 0rem;
+  border: 1px solid #5a799f;
+  border-radius: 10px;
+  text-align: center;
+  background-color: #fff8e0;
 }
 .stamp-container {
-  border: dashed yellow 2px;
+  /* border: dashed yellow 2px; */
   grid-column: 5/7;
 }
 .airmail-container {
-  border: dashed green 2px;
+  /* border: dashed green 2px; */
   grid-column: 1/3;
   grid-row: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .airmail {
+  font-family: "Space Mono", monospace;
+  font-size: 1rem;
   background-color: #5a799f;
   color: #fff;
   text-align: center;
   border: solid #fff 2px;
   width: 40%;
+  transform: rotate(-25deg);
 }
