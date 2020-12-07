@@ -2,10 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *:focus {
   outline: none;
 }
+
 .envelope {
   font-family: "Sue Ellen Francisco", cursive;
   font-size: 2rem;
@@ -24,43 +26,43 @@
   );
   border-image-slice: 10;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  grid-template-rows: repeat(3, minmax(max-content, 1fr));
+  justify-content: center;
   width: 100vw;
   height: 100vh;
-  justify-content: center;
 }
 .sender {
   /* border: dashed red 2px; */
-  grid-column: 1/3;
+  grid-column: 1/2;
   grid-row: 1;
 }
-.sender h1 {
+.sender p {
   font-size: 2rem;
   padding-left: 2rem;
 }
-.sender h1:nth-child(n + 2) {
+.sender p:nth-child(n + 2) {
   padding-left: 4rem;
 }
 .receiver {
   /* border: dashed blue 2px; */
-  grid-column: 3/6;
+  grid-column: 2/4;
   grid-row: 2;
   display: flex;
   flex-direction: column;
+  font-size: 2.5rem;
 }
-.receiver h1 {
+.receiver p {
   padding-left: 2rem;
 }
-.receiver h2 {
-  font-size: 2.5rem;
-  align-self: center;
+.receiver p:nth-child(n + 2) {
+  padding-left: 4rem;
 }
 .receiver a {
   align-self: flex-end;
 }
 .receiver .input-text {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
   padding: 0rem;
@@ -68,14 +70,15 @@
   border-radius: 10px;
   text-align: center;
   background-color: #fff8e0;
+  font-weight: 400;
 }
 .stamp-container {
   /* border: dashed yellow 2px; */
-  grid-column: 5/7;
+  grid-column: 3/4;
 }
 .airmail-container {
   /* border: dashed green 2px; */
-  grid-column: 1/3;
+  grid-column: 1/2;
   grid-row: 2;
   display: flex;
   align-items: center;
@@ -90,4 +93,54 @@
   border: solid #fff 2px;
   width: 40%;
   transform: rotate(-25deg);
+}
+.open-letter {
+  grid-column: 3/4;
+  grid-row: 3;
+  padding: 2rem;
+  justify-self: end;
+  align-self: end;
+}
+.open-letter a {
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  text-decoration: none;
+  background: #ce5756;
+  padding: 0.5rem 1rem;
+  color: #fff;
+}
+.open-letter a:hover {
+  cursor: pointer;
+}
+#letter {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+.intro {
+  border: 1px dotted black;
+  grid-column: 1/2;
+  grid-row: 1/4;
+}
+.experience {
+  border: 1px dotted black;
+  grid-column: 2/4;
+  grid-row: 1;
+}
+.projects {
+  border: 1px dotted black;
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.education {
+  border: 1px dotted black;
+  grid-column: 3/4;
+  grid-row: 2;
+}
+.hobbies {
+  border: 1px dotted black;
+  grid-column: 3/4;
+  grid-row: 3;
 }
