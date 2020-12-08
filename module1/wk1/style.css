@@ -38,7 +38,7 @@
   grid-row: 1;
 }
 .sender p {
-  font-size: 2rem;
+  font-size: 3vw;
   padding-left: 2rem;
 }
 .sender p:nth-child(n + 2) {
@@ -50,7 +50,7 @@
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  font-size: 2.5rem;
+  font-size: 4vw;
 }
 .receiver p {
   padding-left: 2rem;
@@ -62,13 +62,12 @@
   align-self: flex-end;
 }
 .receiver .input-text {
-  font-size: 2.5rem;
+  font-size: 4vw;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
-  padding: 0rem;
-  border: 1px solid #5a799f;
+  padding-left: 4rem;
+  border: none;
   border-radius: 10px;
-  text-align: center;
   background-color: #fff8e0;
   font-weight: 400;
 }
@@ -86,13 +85,14 @@
 }
 .airmail {
   font-family: "Space Mono", monospace;
-  font-size: 1rem;
+  font-size: 1.5vw;
   background-color: #5a799f;
   color: #fff;
   text-align: center;
   border: solid #fff 2px;
   width: 40%;
   transform: rotate(-25deg);
+  padding: 0.5rem 1rem;
 }
 .open-letter {
   grid-column: 3/4;
@@ -103,7 +103,7 @@
 }
 .open-letter a {
   font-family: "Space Mono", monospace;
-  font-size: 1.5rem;
+  font-size: 1.5vw;
   text-decoration: none;
   background: #ce5756;
   padding: 0.5rem 1rem;
@@ -112,35 +112,43 @@
 .open-letter a:hover {
   cursor: pointer;
 }
-#letter {
+.letter {
   width: 100vw;
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  font-family: "Gaegu", cursive;
+}
+.letter > article {
+  padding: 2rem;
+  font-size: 2rem;
+  border: 10px solid #5a799f;
+  background-color: #fff;
+}
+.letter h1 {
+  font-size: 3rem;
+}
+.letter h2 {
+  font-size: 2.5rem;
 }
 .intro {
-  border: 1px dotted black;
   grid-column: 1/2;
   grid-row: 1/4;
 }
 .experience {
-  border: 1px dotted black;
   grid-column: 2/4;
   grid-row: 1;
 }
 .projects {
-  border: 1px dotted black;
   grid-column: 2/3;
   grid-row: 2/4;
 }
 .education {
-  border: 1px dotted black;
   grid-column: 3/4;
   grid-row: 2;
 }
 .hobbies {
-  border: 1px dotted black;
   grid-column: 3/4;
   grid-row: 3;
 }
