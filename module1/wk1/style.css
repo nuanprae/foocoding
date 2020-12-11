@@ -7,6 +7,9 @@
 *:focus {
   outline: none;
 }
+body {
+  color: #5a799f;
+}
 b {
   color: #ce5756;
 }
@@ -15,7 +18,9 @@ a {
   font-weight: 600;
 }
 img {
-  width: 25vw;
+  margin-top: 1.5rem;
+  width: 50vw;
+  border: 1px solid black;
 }
 .envelope {
   font-family: "Sue Ellen Francisco", cursive;
@@ -71,11 +76,12 @@ img {
   align-self: flex-end;
 }
 .receiver .input-text {
+  color: #5a799f;
   font-size: 4vw;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
   padding-left: 4rem;
-  border: 1px dashed black;
+  border: 1px dashed #5a799f;
   border-radius: 10px;
   background-color: #fff;
   font-weight: 400;
@@ -126,20 +132,24 @@ img {
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   gap: 0.5rem;
+  border: 10px solid #5a799f;
 }
 .letter > article {
   font-family: "Open Sans", sans-serif;
-  padding: 2rem;
+  padding: 4rem;
   font-size: 1.5rem;
   line-height: 1.5;
   background-color: #fff;
   display: flex;
   flex-direction: column;
+  color: #5a799f;
 }
 .letter h1 {
+  margin-top: 1rem;
   font-size: 2.5rem;
+  color: #5a799f;
 }
 .letter h2 {
   font-size: 1.8rem;
@@ -147,20 +157,16 @@ img {
 .letter p {
   margin-top: 2rem;
 }
-.intro-1 {
+.intro {
   grid-column: 1/2;
   grid-row: 1;
-  justify-content: center;
-}
-.intro-2 {
-  grid-column: 1/2;
-  grid-row: 2;
 }
 .projects {
   grid-column: 2/4;
-  grid-row: 1/3;
-  border: 5px dashed #5a799f;
+  grid-row: 1;
+  border-left: 5px dashed #5a799f;
+  overflow-y: scroll;
 }
 .projects > article {
-  margin: 1rem;
+  margin-top: 3rem;
 }
