@@ -13,15 +13,8 @@ body {
 b {
   color: #ce5756;
 }
-a {
-  text-decoration: none;
-}
 a:hover {
   cursor: pointer;
-}
-li {
-  text-decoration: none;
-  list-style: none;
 }
 img {
   margin-top: 1.5rem;
@@ -130,6 +123,7 @@ img {
   display: flex;
   flex-direction: row;
   font-family: "Open Sans", sans-serif;
+  font-size: 1.2rem;
 }
 nav {
   width: 40vw;
@@ -144,9 +138,11 @@ nav a {
   margin: 4rem 4rem;
   font-family: "Space Mono", monospace;
   text-align: center;
-  border: solid #fff 2px;
+  border: 2px solid #fff;
+  box-shadow: 5px 5px 2px #888888;
   padding: 0.5rem 1rem;
   color: #fff;
+  width: 50%;
 }
 nav a:nth-child(odd) {
   background-color: #5a799f;
@@ -157,30 +153,52 @@ nav a:nth-child(even) {
 nav a:nth-child(1) {
   transform: rotate(-20deg);
 }
+nav a:nth-child(2) {
+  align-self: center;
+  transform: rotate(20deg);
+}
 nav a:nth-child(3) {
-  transform: rotate(-20deg);
+  align-self: flex-end;
+}
+nav a:hover {
+  background-color: #888888;
+}
+.letter {
+  display: flex;
+  flex-direction: column;
 }
 .letter > article {
   padding: 2rem 4rem;
-  font-size: 1rem;
   line-height: 1.5;
   background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  border-left: 5px dashed #5a799f;
+  border-left: 1px dashed #5a799f;
+  border-bottom: 1px dashed #5a799f;
+  justify-items: center;
 }
 .letter h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #5a799f;
 }
 .letter h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  line-height: 1.5;
 }
 .letter p {
   margin-top: 2rem;
 }
-.intro {
-  height: 100vh;
+.letter a:visited {
+  text-decoration: none;
+  color: #5a799f;
+}
+.intro h1 {
+  text-align: end;
+}
+.intro h2 {
+  text-align: end;
+  color: #888888;
+}
+.intro ul {
+  padding-left: 2rem;
 }
 .projects > article {
   margin-top: 3rem;
