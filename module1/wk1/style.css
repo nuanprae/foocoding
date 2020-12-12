@@ -24,7 +24,6 @@ img {
 }
 .envelope {
   font-family: "Sue Ellen Francisco", cursive;
-  font-size: 2rem;
   background-color: #fff;
   border: 10px solid;
   border-image: repeating-linear-gradient(
@@ -52,7 +51,7 @@ img {
   grid-row: 1;
 }
 .sender p {
-  font-size: 3vw;
+  font-size: 2.5vw;
   padding-left: 2rem;
 }
 .sender p:nth-child(n + 2) {
@@ -64,7 +63,7 @@ img {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  font-size: 4vw;
+  font-size: 3vw;
 }
 .receiver p {
   padding-left: 2rem;
@@ -77,7 +76,7 @@ img {
 }
 .receiver .input-text {
   color: #5a799f;
-  font-size: 4vw;
+  font-size: 3vw;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
   padding-left: 4rem;
@@ -87,11 +86,9 @@ img {
   font-weight: 400;
 }
 .stamp-container {
-  /* border: dashed yellow 2px; */
   grid-column: 3/4;
 }
 .airmail-container {
-  /* border: dashed green 2px; */
   grid-column: 1/2;
   grid-row: 2;
   display: flex;
@@ -112,9 +109,10 @@ img {
 .open-letter {
   grid-column: 3/4;
   grid-row: 3;
-  padding: 2rem;
+  margin: 2rem;
   justify-self: end;
   align-self: end;
+  font-size: 2vw;
 }
 .open-letter a {
   font-family: "Space Mono", monospace;
@@ -134,12 +132,11 @@ img {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, 1fr);
   gap: 0.5rem;
-  border: 10px solid #5a799f;
 }
 .letter > article {
   font-family: "Open Sans", sans-serif;
-  padding: 4rem;
-  font-size: 1.5rem;
+  padding: 2rem 4rem;
+  font-size: 1rem;
   line-height: 1.5;
   background-color: #fff;
   display: flex;
@@ -147,8 +144,7 @@ img {
   color: #5a799f;
 }
 .letter h1 {
-  margin-top: 1rem;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #5a799f;
 }
 .letter h2 {
