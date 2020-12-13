@@ -18,8 +18,11 @@ a:hover {
 }
 img {
   margin-top: 1.5rem;
-  width: 50vw;
-  border: 1px solid black;
+  width: 40vw;
+  border: 1px solid #888888;
+}
+li {
+  list-style: none;
 }
 .envelope {
   font-family: "Sue Ellen Francisco", cursive;
@@ -47,13 +50,18 @@ img {
 .sender {
   grid-column: 1/2;
   grid-row: 1;
+  padding-left: 4rem;
+}
+.sender ul {
+  display: flex;
+  gap: 1rem;
+}
+.sender img {
+  width: 3vw;
+  border: none;
 }
 .sender p {
   font-size: 2.5vw;
-  padding-left: 2rem;
-}
-.sender p:nth-child(n + 2) {
-  padding-left: 4rem;
 }
 .receiver {
   grid-column: 2/4;
@@ -119,20 +127,24 @@ img {
   padding: 0.5rem 1rem;
   color: #fff;
 }
-.container {
+.letter-container {
   display: flex;
   flex-direction: row;
   font-family: "Open Sans", sans-serif;
   font-size: 1.2rem;
 }
 nav {
+  margin-top: 2rem;
   width: 40vw;
 }
 nav ul {
   position: sticky;
   top: 0;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 nav a {
   margin: 4rem 4rem;
@@ -173,36 +185,39 @@ nav a:hover {
   background-color: #fff;
   border-left: 1px dashed #5a799f;
   border-bottom: 1px dashed #5a799f;
-  justify-items: center;
 }
 .letter h1 {
   font-size: 1.8rem;
-  color: #5a799f;
+  font-weight: 600;
 }
 .letter h2 {
   font-size: 1.5rem;
   line-height: 1.5;
+  color: #ce5756;
 }
 .letter p {
   margin-top: 2rem;
 }
+.letter a {
+  font-weight: 600;
+  color: #5a799f;
+}
+.letter a:hover {
+  color: #888888;
+}
 .letter a:visited {
   text-decoration: none;
-  color: #5a799f;
 }
 .intro h1 {
   text-align: end;
 }
 .intro h2 {
   text-align: end;
-  color: #888888;
+  color: #ce5756;
 }
 .intro ul {
   padding-left: 2rem;
 }
-.projects > article {
-  margin-top: 3rem;
-}
-.contact {
-  height: 100vh;
+.projects article {
+  margin-top: 5rem;
 }
