@@ -41,7 +41,7 @@ li {
   );
   border-image-slice: 10;
   display: grid;
-  grid-template-columns: repeat(3, minmax(max-content, 1fr));
+  grid-template-columns: 1fr 1fr minmax(min-content, max-content);
   grid-template-rows: repeat(3, minmax(max-content, 1fr));
   justify-content: center;
   width: 100vw;
@@ -93,20 +93,44 @@ li {
 .stamp-container {
   grid-column: 3/4;
 }
+.stamp-border {
+  background-color: #ccc;
+  background-image: radial-gradient(#fff 50%, transparent 50%);
+  background-position: -5px -5px;
+  background-repeat: repeat;
+  background-size: 10px 10px;
+  padding: 5px;
+}
+.stamp {
+  display: flex;
+  flex-direction: column;
+  background-color: #ccc;
+}
+.sverige-brev {
+  font-size: 2rem;
+  padding: 0 1rem;
+  align-self: end;
+  color: #fff;
+}
+.sleeping-bear-text {
+  font-size: 1.5rem;
+  align-self: center;
+  color: #fff;
+}
 /* start of bear css image */
 .bear {
+  align-self: center;
   position: relative;
   display: block;
-  border: 1px solid #888888;
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
 }
 .head {
   position: absolute;
   background: #ce5756;
   height: 50%;
   width: 60%;
-  top: 40%;
+  top: 25%;
   left: 20%;
   border-radius: 50% 50% 40% 40%;
   z-index: 1;
