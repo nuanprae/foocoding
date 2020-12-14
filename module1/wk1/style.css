@@ -18,7 +18,7 @@ a:hover {
 }
 img {
   margin-top: 1.5rem;
-  width: 40vw;
+  width: 50vw;
   border: 1px solid #888888;
 }
 li {
@@ -63,8 +63,6 @@ li {
   width: 100%;
   border: none;
 }
-.address {
-}
 .receiver {
   grid-column: 2/4;
   grid-row: 2;
@@ -86,7 +84,7 @@ li {
   font-size: 2.5rem;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
-  padding-left: 4rem;
+  text-align: center;
   border: 1px dashed #5a799f;
   border-radius: 10px;
   background-color: #fff;
@@ -181,7 +179,6 @@ nav a:hover {
   line-height: 1.5;
   background-color: #fff;
   border-left: 1px dashed #5a799f;
-  border-bottom: 1px dashed #5a799f;
 }
 .letter h1 {
   font-size: 1.8rem;
@@ -205,6 +202,9 @@ nav a:hover {
 .letter a:visited {
   text-decoration: none;
 }
+.intro {
+  border-bottom: 1px dashed #5a799f;
+}
 .intro h1 {
   text-align: end;
 }
@@ -216,7 +216,7 @@ nav a:hover {
   padding-left: 2rem;
 }
 .projects article {
-  margin-top: 5rem;
+  margin-top: 2rem;
 }
 /* mobile */
 @media only screen and (max-width: 769px) {
@@ -247,7 +247,6 @@ nav a:hover {
 
   .receiver .input-text {
     font-size: 2rem;
-    padding-left: 0rem;
   }
   .airmail-container {
     display: none;
@@ -281,5 +280,8 @@ nav a:hover {
   }
   nav a:nth-child(2) {
     transform: none;
+  }
+  img {
+    width: 100%;
   }
 }
