@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  overflow-y: hidden;
 }
 *:focus {
   outline: none;
@@ -25,6 +26,7 @@ li {
   list-style: none;
 }
 .envelope {
+  font-size: 2rem;
   font-family: "Sue Ellen Francisco", cursive;
   background-color: #fff;
   border: 10px solid;
@@ -41,9 +43,10 @@ li {
   );
   border-image-slice: 10;
   display: grid;
-  grid-template-columns: 1fr 1fr minmax(min-content, max-content);
+  grid-template-columns:
+    repeat(2, minmax(max-content, 1fr))
+    max-content;
   grid-template-rows: repeat(3, minmax(max-content, 1fr));
-  justify-content: center;
   width: 100vw;
   height: 100vh;
 }
@@ -100,7 +103,6 @@ li {
   border: 2px dashed #fff;
 }
 .sverige-brev {
-  font-size: 2rem;
   padding: 0 1rem;
   align-self: end;
   color: #fff;
@@ -238,7 +240,6 @@ li {
   color: #fff;
   text-align: center;
   border: solid #fff 2px;
-  width: 40%;
   padding: 0.5rem 1rem;
 }
 .open-letter {
