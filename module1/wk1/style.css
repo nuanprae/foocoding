@@ -93,18 +93,11 @@ li {
 .stamp-container {
   grid-column: 3/4;
 }
-.stamp-border {
-  background-color: #ccc;
-  background-image: radial-gradient(#fff 50%, transparent 50%);
-  background-position: -5px -5px;
-  background-repeat: repeat;
-  background-size: 10px 10px;
-  padding: 5px;
-}
 .stamp {
   display: flex;
   flex-direction: column;
   background-color: #ccc;
+  border: 2px dashed #fff;
 }
 .sverige-brev {
   font-size: 2rem;
@@ -347,7 +340,7 @@ nav a:hover {
   .envelope {
     display: grid;
     grid-template-rows: min-content repeat(3, 1fr);
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(max-content, 1fr) max-content;
     line-height: 1.5;
   }
   .sender {
@@ -357,8 +350,12 @@ nav a:hover {
     font-size: 1.8rem;
     padding-top: 1rem;
   }
+  .stamp-container {
+    grid-column: 2/3;
+    grid-row: 2;
+  }
   .receiver {
-    grid-column: 1/2;
+    grid-column: 1/3;
     grid-row: 3;
     font-size: 2rem;
     padding-left: 0;
@@ -368,7 +365,6 @@ nav a:hover {
   .receiver p:nth-child(n + 2) {
     padding-left: 2.2rem;
   }
-
   .receiver .input-text {
     font-size: 2rem;
   }
@@ -376,7 +372,7 @@ nav a:hover {
     display: none;
   }
   .open-letter {
-    grid-column: 1/2;
+    grid-column: 2/3;
     grid-row: 4;
     justify-self: end;
     align-self: center;
@@ -407,5 +403,9 @@ nav a:hover {
   }
   img {
     width: 100%;
+  }
+  .bear {
+    width: 80px;
+    height: 80px;
   }
 }
