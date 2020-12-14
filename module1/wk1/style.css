@@ -51,24 +51,26 @@ li {
   grid-column: 1/2;
   grid-row: 1;
   padding-left: 4rem;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
 }
 .sender ul {
   display: flex;
   gap: 1rem;
 }
 .sender img {
-  width: 3vw;
+  width: 100%;
   border: none;
 }
-.sender p {
-  font-size: 2.5vw;
+.address {
 }
 .receiver {
   grid-column: 2/4;
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  font-size: 3vw;
+  font-size: 2.5rem;
 }
 .receiver p {
   padding-left: 2rem;
@@ -81,7 +83,7 @@ li {
 }
 .receiver .input-text {
   color: #5a799f;
-  font-size: 3vw;
+  font-size: 2.5rem;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
   padding-left: 4rem;
@@ -93,22 +95,35 @@ li {
 .stamp-container {
   grid-column: 3/4;
 }
+.stamp-border {
+  width: 50%;
+  height: 50%;
+  background-color: #888888;
+}
+.stamp-inner {
+  z-index: 2;
+  width: 100%;
+  height: 10%;
+  background-color: red;
+}
+.head {
+  background-color: teal;
+}
 .airmail-container {
   grid-column: 1/2;
   grid-row: 2;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .airmail {
   font-family: "Space Mono", monospace;
-  font-size: 1.5vw;
+  font-size: 1rem;
   background-color: #5a799f;
   color: #fff;
   text-align: center;
   border: solid #fff 2px;
   width: 40%;
-  transform: rotate(-25deg);
   padding: 0.5rem 1rem;
 }
 .open-letter {
@@ -117,13 +132,12 @@ li {
   margin: 2rem;
   justify-self: end;
   align-self: end;
-  font-size: 2vw;
+  font-size: 1rem;
 }
 .open-letter a {
   font-family: "Space Mono", monospace;
-  font-size: 1.5vw;
   text-decoration: none;
-  background: #ce5756;
+  background-color: #ce5756;
   padding: 0.5rem 1rem;
   color: #fff;
 }
@@ -143,8 +157,6 @@ nav ul {
   padding: 3rem 0;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 nav a {
   margin: 4rem 4rem;
@@ -156,11 +168,8 @@ nav a {
   color: #fff;
   width: 50%;
 }
-nav a:nth-child(odd) {
+nav a {
   background-color: #5a799f;
-}
-nav a:nth-child(even) {
-  background: #ce5756;
 }
 nav a:nth-child(1) {
   transform: rotate(-20deg);
@@ -220,4 +229,55 @@ nav a:hover {
 }
 .projects article {
   margin-top: 5rem;
+}
+/* mobile */
+@media only screen and (max-width: 769px) {
+  .envelope {
+    display: grid;
+    grid-template-rows: min-content repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    line-height: 1.5;
+  }
+  .sender {
+    grid-column: 1/2;
+    grid-row: 2;
+    padding-left: 2rem;
+    font-size: 1.8rem;
+    padding-top: 1rem;
+  }
+  .receiver {
+    grid-column: 1/2;
+    grid-row: 3;
+    font-size: 2rem;
+    padding-left: 0;
+    padding-top: 2rem;
+    align-items: center;
+  }
+  .receiver p:nth-child(n + 2) {
+    padding-left: 2.2rem;
+  }
+
+  .receiver .input-text {
+    font-size: 2rem;
+    padding-left: 0rem;
+  }
+  .airmail-container {
+    display: none;
+  }
+  .open-letter {
+    grid-column: 1/2;
+    grid-row: 4;
+    justify-self: end;
+    align-self: center;
+  }
+  .letter-container {
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: row;
+  }
+  nav a {
+    margin: 1rem 1rem;
+  }
 }
