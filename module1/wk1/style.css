@@ -53,7 +53,7 @@ li {
   grid-column: 1/2;
   grid-row: 1;
   padding-left: 4rem;
-  font-size: 2rem;
+  font-size: 2.5rem;
   display: flex;
   flex-direction: column;
 }
@@ -70,7 +70,7 @@ li {
   grid-row: 2;
   display: flex;
   flex-direction: column;
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 .receiver p {
   padding-left: 2rem;
@@ -83,7 +83,7 @@ li {
 }
 .receiver .input-text {
   color: #5a799f;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-family: "Sue Ellen Francisco", cursive;
   margin: 1rem;
   text-align: center;
@@ -234,7 +234,7 @@ li {
 }
 .airmail {
   font-family: "Space Mono", monospace;
-  font-size: 1rem;
+  font-size: 1.5rem;
   background-color: #5a799f;
   color: #fff;
   text-align: center;
@@ -247,7 +247,7 @@ li {
   margin: 2rem;
   justify-self: end;
   align-self: end;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 .open-letter a {
   font-family: "Space Mono", monospace;
@@ -300,6 +300,7 @@ nav a:hover {
 .letter h1 {
   font-size: 1.8rem;
   font-weight: 600;
+  margin-top: 2rem;
 }
 .letter h2 {
   font-size: 1.5rem;
@@ -331,6 +332,9 @@ nav a:hover {
 }
 .intro ul {
   padding-left: 2rem;
+}
+.intro li {
+  list-style-type: square;
 }
 .projects article {
   margin-top: 2rem;
@@ -376,6 +380,7 @@ nav a:hover {
     grid-row: 4;
     justify-self: end;
     align-self: center;
+    font-size: 1rem;
   }
   .letter-container {
     display: flex;
