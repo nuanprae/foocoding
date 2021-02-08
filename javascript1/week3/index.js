@@ -71,20 +71,63 @@ const vehicle = (colour, vehicle, age) => {
         1: "car",
         2: "motorbike"
     };
-    let condition = {
-        1: "new",
-        5: "used"
+    if (age < 1) {
+        return console.log(`a ${colour} new ${vehicles[vehicle]}`);
+    } else if (age >= 1) {
+        return console.log(`a ${colour} used ${vehicles[vehicle]}`);
     };
-    return console.log(`a ${colour} ${condition[age]} ${vehicles[vehicle]}`)
 };
 
 vehicle("red", 1, 1);
 
 // 7. 8. 
+const logItem = () => {
 let vehicles = ["motorbike", "caravan", "car", "bike", "van", "truck"];
 console.log(vehicles[2]);
+};
+logItem();
 
 // 9. 
+const vehicleCode = (colour, vehicle, age) => {
+    let vehicles = ["motorbike", "caravan", "car", "bike", "van", "truck"];
+    if (age < 1) {
+        return console.log(`a ${colour} new ${vehicles[vehicle]}`);
+    } else if (age >= 1) {
+        return console.log(`a ${colour} used ${vehicles[vehicle]}`);
+    };
+};
+vehicleCode("green", 3, 1);
+
+// 10. 
+const advert = () => {
+    let vehicleList = ["motorbike", "caravan", "car", "bike", "van", "truck"];
+    let text = "Amazing Joe's Garage, we service ";
+    let lastVehicle;
+    for (i = 0; i < vehicleList.length; i++) {
+        if (i === vehicleList.length - 1) {
+            lastVehicle = `and ${vehicleList[i]}s.`;
+        } else {
+            text += `${vehicleList[i]}s, `;
+        }
+    }
+    console.log(text + lastVehicle);
+};
+advert();
+// 11. 
+const addMoreVehicles = () => {
+    let vehicleList = ["motorbike", "caravan", "car", "bike", "van", "truck", "scooter"];
+    let text = "Amazing Joe's Garage, we service ";
+    let lastVehicle;
+    for (i = 0; i < vehicleList.length; i++) {
+        if (i === vehicleList.length - 1) {
+            lastVehicle = `and ${vehicleList[i]}s.`;
+        } else {
+            text += `${vehicleList[i]}s, `;
+        }
+    }
+    console.log(text + lastVehicle);
+};
+addMoreVehicles(); // yes, it works without changing the code 
 
 // 12. 
 const obj = {};
@@ -129,5 +172,3 @@ let bar = 42;
 console.log(typeof typeof bar);
 // typeof returns a string eg. "number", "object", "string"
 // So typeof "number" is a "string"
-
-
