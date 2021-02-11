@@ -1,35 +1,33 @@
 // 1. strings regex
-let myString = "hello,this,is,a,difficult,to,read,sentence";
+let myString = 'hello,this,is,a,difficult,to,read,sentence';
 console.log(myString);
 console.log(myString.length);
 console.log(myString.replace(/,/g, ' '));
 
 // 2. arrays
-let favoriteAnimals = ["blowfish", "capricorn", "giraffe"];
+let favoriteAnimals = ['blowfish', 'capricorn', 'giraffe'];
 console.log(favoriteAnimals);
 
 // insert item to the end of array (immutable)
-let maurosFavoriteAnimals = [...favoriteAnimals, "turtle"];
+let maurosFavoriteAnimals = [...favoriteAnimals, 'turtle'];
 console.log(maurosFavoriteAnimals);
-// insert item at specific index, remove none of existing items, item to be inserted 
+// insert item at specific index, remove none of existing items, item to be inserted
 // not modifying the original array
 const insert = (arr, index, item) => {
-    return [
-        ...arr.slice(0, index),
-        item,
-        ...arr.slice(index)
-    ];
+  return [...arr.slice(0, index), item, ...arr.slice(index)];
 };
-let jimsFavoriteAnimals = insert(maurosFavoriteAnimals, 1, "meerkat");
-console.log(jimsFavoriteAnimals)
-console.log("The array has a length of " + jimsFavoriteAnimals.length);
+let jimsFavoriteAnimals = insert(maurosFavoriteAnimals, 1, 'meerkat');
+console.log(jimsFavoriteAnimals);
+console.log('The array has a length of ' + jimsFavoriteAnimals.length);
 
 // Using filter in order to create a new array and not modify the original
-let jasonsFavoriteAnimals = jimsFavoriteAnimals.filter(animal => animal !== "giraffe");
+let jasonsFavoriteAnimals = jimsFavoriteAnimals.filter((animal) => animal !== 'giraffe');
 console.log(jasonsFavoriteAnimals);
 
 // finding index of element in an array
-console.log("This item you are looking for is at index: " + jasonsFavoriteAnimals.indexOf("meerkat"));
+console.log(
+  'This item you are looking for is at index: ' + jasonsFavoriteAnimals.indexOf('meerkat'),
+);
 
 // More JavaScript
 // 1. add numbers function
@@ -38,132 +36,131 @@ addThreeNum(2, 3, 5);
 
 // 2. expression interpolation
 const colourCar = (colour) => console.log(`a ${colour} car`);
-colourCar("blue");
+colourCar('blue');
 
 // 3. print obj
 const cat = {
-    colour: "black",
-    eyes: 2,
-    ears: 2,
-    nose: 1,
-    paws: 4,
+  colour: 'black',
+  eyes: 2,
+  ears: 2,
+  nose: 1,
+  paws: 4,
 };
 const printObj = (obj) => console.log(obj);
 printObj(cat);
 
-// 4. if else 
+// 4. if else
 const vehicleType = (colour, vehicle) => {
-    let vehicles = {
-        1: "car",
-        2: "motorbike"
-    }
-    return console.log(`a ${colour} ${vehicles[vehicle]}`)
+  let vehicles = {
+    1: 'car',
+    2: 'motorbike',
+  };
+  return console.log(`a ${colour} ${vehicles[vehicle]}`);
 };
-vehicleType("red", 2);
+vehicleType('red', 2);
 
-// 5. 
+// 5.
 const isTrue = (x, y) => console.log(x === y);
 isTrue(3, 3);
 
 // 6.
 const vehicle = (colour, vehicle, age) => {
-    let vehicles = {
-        1: "car",
-        2: "motorbike"
-    };
-    if (age < 1) {
-        return console.log(`a ${colour} new ${vehicles[vehicle]}`);
-    } else if (age >= 1) {
-        return console.log(`a ${colour} used ${vehicles[vehicle]}`);
-    };
+  let vehicles = {
+    1: 'car',
+    2: 'motorbike',
+  };
+  if (age < 1) {
+    return console.log(`a ${colour} new ${vehicles[vehicle]}`);
+  } else if (age >= 1) {
+    return console.log(`a ${colour} used ${vehicles[vehicle]}`);
+  }
 };
 
-vehicle("red", 1, 1);
+vehicle('red', 1, 1);
 
-// 7. 8. 
+// 7. 8.
 const logItem = () => {
-let vehicles = ["motorbike", "caravan", "car", "bike", "van", "truck"];
-console.log(vehicles[2]);
+  let vehicles = ['motorbike', 'caravan', 'car', 'bike', 'van', 'truck'];
+  console.log(vehicles[2]);
 };
 logItem();
 
-// 9. 
+// 9.
 const vehicleCode = (colour, vehicle, age) => {
-    let vehicles = ["motorbike", "caravan", "car", "bike", "van", "truck"];
-    if (age < 1) {
-        return console.log(`a ${colour} new ${vehicles[vehicle]}`);
-    } else if (age >= 1) {
-        return console.log(`a ${colour} used ${vehicles[vehicle]}`);
-    };
+  let vehicles = ['motorbike', 'caravan', 'car', 'bike', 'van', 'truck'];
+  if (age < 1) {
+    return console.log(`a ${colour} new ${vehicles[vehicle]}`);
+  } else if (age >= 1) {
+    return console.log(`a ${colour} used ${vehicles[vehicle]}`);
+  }
 };
-vehicleCode("green", 3, 1);
+vehicleCode('green', 3, 1);
 
-// 10. 
+// 10.
 const advert = () => {
-    let vehicleList = ["motorbike", "caravan", "car", "bike", "van", "truck"];
-    let text = "Amazing Joe's Garage, we service ";
-    let lastVehicle;
-    for (i = 0; i < vehicleList.length; i++) {
-        if (i === vehicleList.length - 1) {
-            lastVehicle = `and ${vehicleList[i]}s.`;
-        } else {
-            text += `${vehicleList[i]}s, `;
-        }
+  let vehicleList = ['motorbike', 'caravan', 'car', 'bike', 'van', 'truck'];
+  let text = "Amazing Joe's Garage, we service ";
+  let lastVehicle;
+  for (i = 0; i < vehicleList.length; i++) {
+    if (i === vehicleList.length - 1) {
+      lastVehicle = `and ${vehicleList[i]}s.`;
+    } else {
+      text += `${vehicleList[i]}s, `;
     }
-    console.log(text + lastVehicle);
+  }
+  console.log(text + lastVehicle);
 };
 advert();
-// 11. 
+// 11.
 const addMoreVehicles = () => {
-    let vehicleList = ["motorbike", "caravan", "car", "bike", "van", "truck", "scooter"];
-    let text = "Amazing Joe's Garage, we service ";
-    let lastVehicle;
-    for (i = 0; i < vehicleList.length; i++) {
-        if (i === vehicleList.length - 1) {
-            lastVehicle = `and ${vehicleList[i]}s.`;
-        } else {
-            text += `${vehicleList[i]}s, `;
-        }
+  let vehicleList = ['motorbike', 'caravan', 'car', 'bike', 'van', 'truck', 'scooter'];
+  let text = "Amazing Joe's Garage, we service ";
+  let lastVehicle;
+  for (i = 0; i < vehicleList.length; i++) {
+    if (i === vehicleList.length - 1) {
+      lastVehicle = `and ${vehicleList[i]}s.`;
+    } else {
+      text += `${vehicleList[i]}s, `;
     }
-    console.log(text + lastVehicle);
+  }
+  console.log(text + lastVehicle);
 };
-addMoreVehicles(); // yes, it works without changing the code 
+addMoreVehicles(); // yes, it works without changing the code
 
-// 12. 
+// 12.
 const obj = {};
 
 // 13. 14.
 let teachers = {
-    module1: "Joseph",
-    module2: "Seif",
-    languages: ["HTML", "CSS", "JavaScript"]
-}
+  module1: 'Joseph',
+  module2: 'Seif',
+  languages: ['HTML', 'CSS', 'JavaScript'],
+};
 
 // 15. Checking if elements inside both arrays are identical (same length, same value, same order)
 let array1 = [1, 2, 3];
-let array2 = [1, 2, 3]; 
+let array2 = [1, 2, 3];
 
 const isSameArray = (a, b) => {
-    return a.length === b.length &&
-    a.every((element, index) => element === b[index]);
-}
+  return a.length === b.length && a.every((element, index) => element === b[index]);
+};
 console.log(isSameArray(array1, array2));
 
 // 16.
-let o1 = { foo: "bar" };
-let o2 = { foo: "bar" };
+let o1 = { foo: 'bar' };
+let o2 = { foo: 'bar' };
 let o3 = o2;
 
 console.log(o2);
 console.log(o3);
 
 // changing o2 doesn't change o3
-o2 = { foo: "boo" };
+o2 = { foo: 'boo' };
 console.log(o2);
 console.log(o3);
 
 // changing o1 doesn't change o3
-o1 = { foo: "bee" };
+o1 = { foo: 'bee' };
 console.log(o1);
 console.log(o3);
 
