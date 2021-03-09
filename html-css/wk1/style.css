@@ -25,7 +25,7 @@ li {
   list-style: none;
 }
 .envelope {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: 'Sue Ellen Francisco', cursive;
   background-color: #fff;
   border: 10px solid;
@@ -42,18 +42,15 @@ li {
   );
   border-image-slice: 10;
   display: grid;
-  grid-template-columns:
-    repeat(2, minmax(max-content, 1fr))
-    max-content;
-  grid-template-rows: repeat(3, minmax(max-content, 1fr));
-  width: 100vw;
+  grid-template-columns: max-content 1fr max-content;
+  grid-template-rows: max-content 1fr auto;
   height: 100vh;
 }
 .sender {
+  font-size: 1.8rem;
   grid-column: 1/2;
   grid-row: 1;
-  padding-left: 4rem;
-  font-size: 2.5rem;
+  padding-left: 3rem;
   display: flex;
   flex-direction: column;
 }
@@ -66,11 +63,13 @@ li {
   border: none;
 }
 .receiver {
-  grid-column: 2/4;
+  font-size: 2.5rem;
+  grid-column: 2/3;
   grid-row: 2;
+  justify-self: center;
+  align-self: start;
   display: flex;
   flex-direction: column;
-  font-size: 3rem;
 }
 .receiver p {
   padding-left: 2rem;
@@ -82,8 +81,8 @@ li {
   align-self: flex-end;
 }
 .receiver .input-text {
+  font-size: 2.5rem;
   color: #5a799f;
-  font-size: 3rem;
   font-family: 'Sue Ellen Francisco', cursive;
   margin: 1rem;
   text-align: center;
@@ -94,6 +93,7 @@ li {
 }
 .stamp-container {
   grid-column: 3/4;
+  grid-row: 1;
 }
 .stamp {
   display: flex;
@@ -107,7 +107,6 @@ li {
   color: #fff;
 }
 .sleeping-bear-text {
-  font-size: 1.5rem;
   align-self: center;
   color: #fff;
 }
@@ -116,8 +115,8 @@ li {
   align-self: center;
   position: relative;
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
 }
 .head {
   position: absolute;
@@ -229,12 +228,13 @@ li {
   grid-column: 1/2;
   grid-row: 2;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-self: center;
+  align-items: start;
+  margin: 3rem;
 }
 .airmail {
+  font-size: 1rem;
   font-family: 'Space Mono', monospace;
-  font-size: 1.5rem;
   background-color: #5a799f;
   color: #fff;
   text-align: center;
@@ -243,13 +243,13 @@ li {
 }
 .open-letter {
   grid-column: 3/4;
-  grid-row: 3;
-  margin: 2rem;
-  justify-self: end;
+  grid-row: 2;
+  justify-self: center;
   align-self: end;
-  font-size: 1.5rem;
+  margin: 2rem;
 }
 .open-letter a {
+  font-size: 1rem;
   font-family: 'Space Mono', monospace;
   text-decoration: none;
   background-color: #ce5756;
