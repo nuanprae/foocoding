@@ -43,7 +43,7 @@ li {
   border-image-slice: 10;
   display: grid;
   grid-template-columns: max-content 1fr max-content;
-  grid-template-rows: max-content 1fr auto;
+  grid-template-rows: max-content 1fr max-content auto;
   height: 100vh;
 }
 .sender {
@@ -67,7 +67,7 @@ li {
   grid-column: 2/3;
   grid-row: 2;
   justify-self: center;
-  align-self: start;
+  align-self: center;
   display: flex;
   flex-direction: column;
 }
@@ -115,8 +115,8 @@ li {
   align-self: center;
   position: relative;
   display: block;
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
 }
 .head {
   position: absolute;
@@ -229,7 +229,7 @@ li {
   grid-row: 2;
   display: flex;
   justify-self: center;
-  align-items: start;
+  align-self: center;
   margin: 3rem;
 }
 .airmail {
@@ -243,7 +243,7 @@ li {
 }
 .open-letter {
   grid-column: 3/4;
-  grid-row: 2;
+  grid-row: 3;
   justify-self: center;
   align-self: end;
   margin: 2rem;
@@ -340,31 +340,31 @@ nav a:hover {
   margin-top: 2rem;
 }
 /* mobile */
-@media only screen and (max-width: 813px) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) {
   .envelope {
     display: grid;
-    grid-template-rows: min-content repeat(3, 1fr);
+    grid-template-rows: max-content 1fr max-content;
     grid-template-columns: minmax(max-content, 1fr) max-content;
     line-height: 1.5;
   }
   .sender {
     grid-column: 1/2;
-    grid-row: 2;
+    grid-row: 1;
     padding-left: 2rem;
     font-size: 1.8rem;
     padding-top: 1rem;
   }
   .stamp-container {
     grid-column: 2/3;
-    grid-row: 2;
+    grid-row: 1;
   }
   .receiver {
     grid-column: 1/3;
-    grid-row: 3;
+    grid-row: 2;
     font-size: 2rem;
     padding-left: 0;
-    padding-top: 2rem;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
   }
   .receiver p:nth-child(n + 2) {
     padding-left: 2.2rem;
@@ -376,8 +376,8 @@ nav a:hover {
     display: none;
   }
   .open-letter {
-    grid-column: 2/3;
-    grid-row: 4;
+    grid-column: 1/3;
+    grid-row: 3;
     justify-self: end;
     align-self: center;
     font-size: 1rem;
@@ -415,7 +415,7 @@ nav a:hover {
   }
 }
 
-@media only screen and (max-width: 813px) and (orientation: landscape) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) {
   .envelope {
     display: grid;
     grid-template-rows: min-content 1fr;
@@ -438,7 +438,7 @@ nav a:hover {
     font-size: 1.8rem;
     padding-left: 0;
     padding-top: 0;
-    align-items: center;
+    align-self: center;
   }
   .receiver .input-text {
     font-size: 1.5rem;
